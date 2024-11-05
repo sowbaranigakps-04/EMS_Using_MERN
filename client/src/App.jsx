@@ -29,7 +29,7 @@ import EmpEnroll from './components/Admin/Enrollment.jsx';
 import ModuleDashboard from './components/Employee/Module.jsx';
 import { UserProvider } from './UserContext';
 
-axios.defaults.baseURL = 'https://ems-backend-ashy.vercel.app/';
+axios.defaults.baseURL = 'https://ems-backend-ashy.vercel.app';
 axios.defaults.withCredentials = true;
 
 function App() {
