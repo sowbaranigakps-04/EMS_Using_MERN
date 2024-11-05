@@ -27,7 +27,7 @@ const UpdateEmployee = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/employee/' + id)
+        axios.get('https://ems-backend-ashy.vercel.app/employee/' + id)
             .then(result => {
                 const data = result.data.Result[0];
                 setEmployee({
