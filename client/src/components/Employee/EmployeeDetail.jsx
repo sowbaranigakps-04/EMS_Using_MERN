@@ -132,7 +132,7 @@ const EmployeeDetail = () => {
                       <td>{request.reason}</td>
                       <td>
                         <Link
-                          to={`https://ems-mini.vercel.app/EmpDashboard/LeaveReq/${id}`}
+                          to={`https://localhost:8000/EmpDashboard/LeaveReq/${id}`}
                           className="btn btn-danger p-2"
                         >
                           Manage

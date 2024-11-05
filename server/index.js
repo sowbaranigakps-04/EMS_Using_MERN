@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static('Public'))
 
 app.use(cors({
-    origin: "https://ems-mini.vercel.app", // Set to your frontend's URL
+    origin: "https://ems-mini.onrender.com/", // Set to your frontend's URL
     methods: ['GET', 'POST', 'PUT', "DELETE"],
     credentials: true
 }));
@@ -42,9 +42,12 @@ const verifyuser = (req,res,next)=>{
         res.json({Status:false,Error:"Not Authenticated"})
     }
 }
-app.get('/verify',verifyuser,(req,res)=>{
-    return res.json({Status:true, role:req.role, id:req.id})
-})
+
+app.get('/verify', verifyuser, (req, res) => {
+    console.log('Verify endpoint hit');
+    return res.json({Status: true, role: req.role, id: req.id});
+});
+
 
 app.get('/',(req,res)=>{
     res.send('API Working')

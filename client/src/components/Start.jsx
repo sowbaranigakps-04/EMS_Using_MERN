@@ -8,7 +8,7 @@ const Start = () => {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('https://ems-backend-ashy.vercel.app/verify')
+    axios.get('https://localhost:8000/verify')
     .then(result => {
       if(result.data.Status) {
         if(result.data.role === "admin") {
