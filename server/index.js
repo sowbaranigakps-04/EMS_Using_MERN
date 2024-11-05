@@ -19,10 +19,11 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static('Public'))
 
 app.use(cors({
+    origin: "https://ems-mini.vercel.app", // Set to your frontend's URL
     methods: ['GET', 'POST', 'PUT', "DELETE"],
-    credentials: true,
-    origin: "http://localhost:5173", // Update with your frontend URL
+    credentials: true
 }));
+
 
 
 app.use('/',require('./routes/authRoutes'))
